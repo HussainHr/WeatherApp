@@ -7,6 +7,9 @@ class UserProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.redAccent,
+      body: Column(
+        children: [],
+      ),
     );
   }
 }

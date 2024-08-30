@@ -35,7 +35,7 @@ class AuthService {
     );
 
     if (response.statusCode == 200) {
-      return UserLoginModel.fromJson(json.decode(response.body));
+      return UserLoginModel.fromJson(json.decode(response.body)); // i forget to decode type pf data here
     } else {
       print("Response status: ${response.statusCode}");
       print("Response body: ${response.body}");
