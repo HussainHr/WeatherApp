@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:weather_app/config/provider/auth_provider.dart';
+import 'package:weather_app/feathure/screen/json_display_screen.dart';
+import 'package:weather_app/feathure/screen/user_list_screen.dart';
 import 'package:weather_app/feathure/screen/user_profile_screen.dart';
 
 class UserLoginScreen extends ConsumerStatefulWidget {
@@ -11,8 +13,8 @@ class UserLoginScreen extends ConsumerStatefulWidget {
 }
 
 class _UserLoginScreenState extends ConsumerState<UserLoginScreen> {
-  final _emailController = TextEditingController();
-  final _passwordController = TextEditingController();
+  final _emailController = TextEditingController(text: 'emilys');
+  final _passwordController = TextEditingController(text: 'emilyspass');
   bool _isLoading = false;
 
   void login() async {
@@ -31,7 +33,9 @@ class _UserLoginScreenState extends ConsumerState<UserLoginScreen> {
         SnackBar(content: Text('Login successful: ${user.username}')),
       );
       
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> const UserProfileScreen()));
+      // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> const UserProfileScreen()));
+      // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> AllUserListScreen()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> JsonDataDisplayScreen()));
       
     } catch (e) {
       ScaffoldMessenger.of(context)

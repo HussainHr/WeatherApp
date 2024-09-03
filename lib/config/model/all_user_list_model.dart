@@ -104,8 +104,11 @@ class Users {
     birthDate = json['birthDate'];
     image = json['image'];
     bloodGroup = json['bloodGroup'];
-    height = json['height'];
-    weight = json['weight'];
+    // Ensure height and weight are treated as doubles
+    height = (json['height'] as num?)?.toDouble();
+    weight = (json['weight'] as num?)?.toDouble();
+    // height = json['height'];
+    // weight = json['weight'];
     eyeColor = json['eyeColor'];
     hair = json['hair'] != null ? new Hair.fromJson(json['hair']) : null;
     ip = json['ip'];
