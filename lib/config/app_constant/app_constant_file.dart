@@ -19,7 +19,6 @@ List<AndroidVersion> encodeJson(String jsonStr){
       item.forEach((element) { 
         andoidVersion.add(AndroidVersion(id: element['id'], title: element['title']));
       });
-      
     }
   }
   return andoidVersion;
