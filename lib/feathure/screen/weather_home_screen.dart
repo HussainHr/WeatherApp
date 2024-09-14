@@ -34,8 +34,8 @@ class _UserLoginScreenState extends ConsumerState<UserLoginScreen> {
       );
       
       // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> const UserProfileScreen()));
-      // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> AllUserListScreen()));
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> JsonDataDisplayScreen()));
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> AllUserListScreen()));
+      // Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> JsonDataDisplayScreen()));
       
     } catch (e) {
       ScaffoldMessenger.of(context)
